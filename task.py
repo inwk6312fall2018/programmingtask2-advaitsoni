@@ -21,16 +21,16 @@ i=16
 while i<len(lst1):
 	lst2.append(lst1[i])
 	i+=9
-lst3=histogram(lst2) # dict of crime ID , and repetation of it
+dic=histogram(lst2) # dict of crime ID , and repetation of it
 
 """make dict of Crime Id vs Crime name"""
-lst4=list(lst3.keys())
+lst4=list(dic.keys())
 for i in range(len(lst1)):
 	if lst1[i] in lst4:
 		dict[lst1[i]]=lst1[i+1].strip()
 
 """print table"""
 print("{0:25s} {1:25s} {2:1s}".format('Crime type','Crime ID','Crime Count'))
-for key,value in lst3.items():
+for key,value in dic.items():
 	if key in dict.keys():
-		print("{0:25} {1:25} {2:1}".format(dict[key],key,lst3[key]))
+		print("{0:25} {1:25} {2:1}".format(dict[key],key,dic[key]))
