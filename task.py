@@ -30,11 +30,7 @@ for i in range(len(lst1)):
 		dict[lst1[i]]=lst1[i+1].strip()
 
 """print table"""
-print("Crime Type",end=' '*15)
-print("Crime ID",end=' '*17)
-print("Crime Count",end='\n')
+print("{0:25s} {1:25s} {2:1s}".format('Crime type','Crime ID','Crime Count'))
 for key,value in lst3.items():
 	if key in dict.keys():
-		print(dict[key],end=' '*(25-len(dict[key])))
-		print(key,end=' '*(25-len(key)))
-		print(lst3[key],end='\n')
+		print("{0:25} {1:25} {2:1}".format(dict[key],key,lst3[key]))
