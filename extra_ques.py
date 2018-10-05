@@ -3,7 +3,7 @@ Can you order them by most recent crime first and display it? """
 
 lst_words=[]	#contains all words
 lst_data=[]	#contains tuple of location,crime id, crime name
-file = open('crime.txt')
+file = open('Crime.csv')
 
 #to store all words in lst_words
 for line in file:
@@ -18,6 +18,6 @@ while i<len(lst_words)-4:
 	i+=9
 
 #print most recent crime first 	
-print("{0:35s} {1:35s} {2:10s} {3:1s}".format("Date","location","crime ID","Crime type"))
+print("{0:25s} {1:35s} {2:10s} {3:1s}".format("Date","location","crime ID","Crime type"))
 for i in sorted(lst_data)[::-1]:
-		print("{0:35} {1:35} {2:10} {3:1}".format(i[0],i[1],i[2],i[3]))
+		print("{0:25} {1:35} {2:10} {3:1}".format(i[0],i[1],i[2],i[3]))
